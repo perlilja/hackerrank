@@ -42,4 +42,10 @@ public class Solution {
         
         return result;
     }
+    
+    public int stockMaximize(int[] prices) {
+        int result = 0;
+        
+        return result;
+    }
 }
