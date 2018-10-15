@@ -48,6 +48,12 @@ public class Hackerrank {
     }
     
     public void stockMaximize(Solution loesung) {
+        
+//        Function Description
+//          Complete the stockmax function in the editor below. It must return an integer that represents the maximum profit achievable.
+//          stockmax has the following parameter(s):
+//          prices: an array of integers that represent predicted daily stock prices
+
 //        int[] prices = new int[3];
         int[] testcase1 = new int[3];
         testcase1[0] = 5;
