@@ -25,6 +25,12 @@ public class Hackerrank {
     
     // create the task inside a new method here
     public void gradingStudents(Solution loesung) {
+        
+//        Function Description
+//          Complete the function gradingStudents in the editor below. It should return an integer array consisting of rounded grades.
+//          gradingStudents has the following parameter(s):
+//          grades: an array of integers representing grades before rounding
+
         int[] grades = new int[5];
         
         grades[0] = 4;      
