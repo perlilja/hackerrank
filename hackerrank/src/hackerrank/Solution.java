@@ -26,6 +26,20 @@ public class Solution {
          */
         int[] result = new int [grades[0]];
         
+        // Iterate trough each grade 
+        for(int i = 1; i < (grades[0]+1); i++)
+        {
+            if(grades[i] >= 38)
+            {
+                if(grades[i]%5>=3)
+                {   
+                    System.out.println("Ergebnis des Modulo");
+                    grades[i] =  grades[i]+(5-(grades[i]%5));
+                }
+            }
+            result[i-1] = grades[i];
+        }
+        
         return result;
     }
 }
