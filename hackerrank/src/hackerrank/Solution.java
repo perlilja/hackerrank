@@ -20,4 +20,12 @@ public class Solution {
     }
 
     // create a new Method for each soliution inside this class
+    public int[] gradingStudents(int[] grades) {
+        /*
+         * Write your code here.
+         */
+        int[] result = new int [grades[0]];
+        
+        return result;
+    }
 }
