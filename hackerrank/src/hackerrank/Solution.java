@@ -10,6 +10,7 @@ import java.text.*;
 import java.util.*;
 import java.util.regex.*;
 import jdk.nashorn.internal.objects.NativeArray;
+
 /**
  *
  * @author Benutzer1
@@ -27,14 +28,14 @@ public class Solution {
         int[] result = new int [grades[0]];
         
         // Iterate trough each grade 
-        for(int i = 1; i < (grades[0]+1); i++)
+        for (int i = 1; i < (grades[0]+1); i++)
         {
-            if(grades[i] >= 38)
+            if (grades[i] >= 38)
             {
-                if(grades[i]%5>=3)
+                if (grades[i]%5 >= 3)
                 {   
                     System.out.println("Ergebnis des Modulo");
-                    grades[i] =  grades[i]+(5-(grades[i]%5));
+                    grades[i] = grades[i] + (5 - (grades[i] % 5));
                 }
             }
             result[i-1] = grades[i];
@@ -46,14 +47,14 @@ public class Solution {
     public int stockMaximize(int[] prices) {
         int result = 0;
         int max = 0;
-        ArrayList<Integer> gekauft = new ArrayList();
+        List<Integer> gekauft = new LinkedList();
         System.out.println("stockMaximize wird aufgerufen \n");
-        for(int i = 0; i<prices.length; i++) {
-            for(int j = i; j<prices.length; j++) {
-                if(prices[i]<prices[j])
+        for (int i = 0; i<prices.length; i++) {
+            for (int j = i; j<prices.length; j++) {
+                if (prices[i]<prices[j])
                 {
                     // Kaufen 
-                    if(!gekauft.contains(prices[i])) {
+                    if (!gekauft.contains(prices[i])) {
                         System.out.println( "bei " + prices[i] +" wird gekauft, weil " + prices[j] + " groeßer ist." );
                         gekauft.add(prices[i]);
                     }
@@ -71,16 +72,16 @@ public class Solution {
                 }
                 
                 // vielleicht nur den nächsten wert also i+1 betrachten?
-                if(gekauft.size() > 0 && prices[j] < prices[i])
+                if ((gekauft.size() > 0) && (prices[j] < prices[i]))
                 {   
                     // derzeitiger Wert lokales oder globales Maximum?
                     System.out.println( prices[i] + " als Maximum gefunden!");
                     
-                    for(int k = 0; k<prices.length; k++) {
+                    for (int k = 0; k<prices.length; k++) {
                         if (prices[j] > max)
-                    {
-                        max = prices[j];
-                    }
+                        {
+                            max = prices[j];
+                        }
                     }
                     
                     // if global
@@ -96,10 +97,11 @@ public class Solution {
         System.out.println("Das Maximum ist: " + max);
         
         
-        // Verkaufen
-        for(int k = 0; k < gekauft.size(); k++)
+        // Verkaufen            
+        Iterator<Integer> it = gekauft.iterator();
+        while (it.hasNext())
         {
-            result = result + (max - gekauft.get(k));
+            result = result + (max - it.next());
         }
         return result;
     }
