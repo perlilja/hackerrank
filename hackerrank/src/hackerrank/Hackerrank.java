@@ -5,8 +5,6 @@
  */
 package hackerrank;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Benutzer1
@@ -31,18 +29,11 @@ public class Hackerrank {
 //          gradingStudents has the following parameter(s):
 //          grades: an array of integers representing grades before rounding
 
-        int[] grades = new int[5];
-        
-        grades[0] = 4;      
-        grades[1] = 73;
-        grades[2] = 67;
-        grades[3] = 38;
-        grades[4] = 33;
+        int[] grades = new int[]{4, 73, 67, 38, 33};
         
         int[] ergebnis = loesung.gradingStudents(grades);
         
-        for(int i =  0; i < (grades[0]); i++)
-        {
+        for(int i =  0; i < grades[0]; i++) {
             System.out.println(ergebnis[i]);
         }
     }
@@ -55,21 +46,11 @@ public class Hackerrank {
 //          prices: an array of integers that represent predicted daily stock prices
 
 //        int[] prices = new int[3];
-        int[] testcase1 = new int[3];
-        testcase1[0] = 5;
-        testcase1[1] = 3;
-        testcase1[2] = 2;
+        int[] testcase1 = new int[]{5,3,2};
         
-        int[] testcase2 = new int[3];
-        testcase2[0] = 1;
-        testcase2[1] = 2;
-        testcase2[2] = 100;
+        int[] testcase2 = new int[]{1,2,100};
         
-        int[] testcase3 = new int[4];
-        testcase3[0] = 1;
-        testcase3[1] = 3;
-        testcase3[2] = 1;
-        testcase3[3] = 2;
+        int[] testcase3 = new int[]{1,3,1,2};
         
         int ergebnis = loesung.stockMaximize(testcase3);
         System.out.println("Loesung stockMaximize: " + ergebnis);
